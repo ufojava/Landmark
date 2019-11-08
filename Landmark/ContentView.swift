@@ -10,8 +10,51 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        //Combine all components
+        VStack {
+            
+            //MapView
+            MAPView()
+                .frame(height: 300)
+                .edgesIgnoringSafeArea(.top)
+            
+            //Circular Image
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            
+            VStack(alignment: .leading) {
+                 
+                 Text("Turtle Rock")
+                 .font(.title)
+                 .foregroundColor(.green)
+                 
+                 HStack {
+                     
+                      Text("Joshua Tree Nationa Park").font(.subheadline)
+                     Spacer()
+                 
+                     
+                     //Adding to the horizonal stack
+                     Text("California")
+                     
+                 }
+                
+                 
+             }.padding()
+            
+            Spacer()
+            
+        }
+        
+ 
+        
+        
+            
     }
+       
 }
 
 struct ContentView_Previews: PreviewProvider {
